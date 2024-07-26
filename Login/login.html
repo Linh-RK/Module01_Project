@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./login.css" />
+
+    <title>LOGIN</title>
+    <link rel="icon" type="image/x-icon" href="../asests/img/logo.png" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrap">
+        <form class="login">
+          <div class="content">
+            <div class="title">
+              <h2>Hello!</h2>
+              <p>Sign in to your account</p>
+            </div>
+            <div class="input-acc">
+              <div class="email">
+                <label for="email-login">Email</label><br />
+                <input type="email" name="email-login" id="email-login" />
+              </div>
+              <div class="password-block">
+                <label for="password-login">Password</label>
+                <input
+                  type="password"
+                  name="password-login"
+                  id="password-login"
+                />
+              </div>
+            </div>
+            <div class="submit">
+              <button id="login" type="button" onclick="loginAcc()">
+                Login
+              </button>
+              <a onclick="switchSignIn()">Chưa có tài khoản. Sign In</a>
+            </div>
+          </div>
+        </form>
+        <!-- ========================== -->
+        <form class="signin" style="display: none">
+          <div class="content">
+            <div class="title">
+              <h2>Create Account</h2>
+            </div>
+            <div class="input-acc">
+              <!-- <div>
+                <label for="name-sign-in">Fullname</label><br />
+                <input
+                  type="text"
+                  name="name-sign-in"
+                  id="name-sign-in"
+                  placeholder="Fullname"
+                />
+              </div> -->
+              <div>
+                <label for="user-name-sign-in">Username</label><br />
+                <input
+                  type="text"
+                  name="user-name-sign-in"
+                  id="user-name-sign-in"
+                />
+              </div>
+              <div class="password-block">
+                <label for="password-sign-in">Password</label>
+                <div class="password">
+                  <input
+                    type="password"
+                    name="password-sign-in"
+                    id="password-sign-in"
+                  />
+                </div>
+                <p>Password must be at least 6 character</p>
+              </div>
+              <div class="confirm-password-block">
+                <label for="confirm-password-sign-in">Confirm Password</label>
+                <div class="confirm-password">
+                  <input
+                    type="password"
+                    name="confirm-password-sign-in"
+                    id="confirm-password-sign-in"
+                  />
+                </div>
+              </div>
+              <div class="email">
+                <label for="email-sign-in">Email</label><br />
+                <input type="email" name="email-sign-in" id="email-sign-in" />
+              </div>
+              <!--  -->
+              <div class="phone">
+                <label for="phone-sign-in">Phone Number</label><br />
+                <input type="tel" name="phone-sign-in" id="phone-sign-in" />
+              </div>
+            </div>
+            <div>
+              <div class="submit">
+                <button id="signIn" onclick="signInAcc()">Sign In</button>
+                <a onclick="switchLogin()">Đã có tài khoản. Login</a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+body {
+  padding: 50px 10%;
+  background-image: url(http://127.0.0.1:5500/admin/asests/img/bg-1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  line-height: 2rem;
+}
+.add-form,
+.cart-info {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+h2 {
+  font-size: 50px;
+  font-family: "Dancing Script", cursive;
+  margin-bottom: 30px;
+  color: #5c3335;
+}
+input {
+  width: 100%;
+  padding: 5px;
+}
+.select {
+  display: flex;
+  justify-content: space-around;
+}
+.select select {
+  min-width: 150px;
+  text-align: center;
+}
+.confirm {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+.confirm button {
+  padding: 8px;
+}
+.confirm .cart {
+  background-color: #3c1a1a;
+  color: white;
+  border-radius: 5px;
+}
+.confirm .payment {
+  background-color: #338dbc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+/* ================CART INFO======================= */
+
+.cart-info .discount {
+  display: flex;
+}
+.cart-info .saved {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-info img {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 5px;
+}
+.cart-info table {
+  width: 100%;
+}
+.cart-info table td {
+  min-width: 50px;
+  align-items: center;
+}
+.cart-info table .name {
+  font-size: 16px;
+}
+.cart-info table .size {
+  color: #969696;
+  font-size: 14px;
+}
+.cart-info .discount input,
+button {
+  line-height: 1rem;
+}
+.cart-info .discount button {
+  min-width: 100px;
+}
+.cart-info .total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+AT:ital,wght@0,100..400;1,100..400&family=Playwrite+BE+VLG:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./check_out.css" />
+    <title>Check out</title>
+    <link rel="icon" type="image/x-icon" href="../asests/img/logo.png" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrap">
+        <!-- =================Form====================== -->
+        <div class="add-form">
+          <form action="">
+            <div class="title">
+              <h2>Anh Hòa Bakery</h2>
+              <div class="process">
+                <a href="">Giỏ hàng </a
+                ><i class="fa-solid fa-chevron-right"></i>
+                <a href="">Thông tin vận chuyển</a
+                ><i class="fa-solid fa-chevron-right"></i>
+                <a href="">Phương thức thanh toán</a
+                ><i class="fa-solid fa-chevron-right"></i>
+              </div>
+              <div>Thông tin thanh toán</div>
+            </div>
+            <div class="input-info">
+              <div>
+                <label for="name">Họ và Tên</label><br />
+                <input type="text" name="name" id="name" />
+              </div>
+              <div>
+                <label for="email">Email</label><br />
+                <input type="email" name="email" id="email" />
+              </div>
+              <div>
+                <label for="tel">Số điện thoại</label><br />
+                <input type="tel" name="tel" id="tel" />
+              </div>
+              <div>
+                <label for="address">Địa chỉ</label><br />
+                <div class="select">
+                  <select name="province" id="province">
+                    Tỉnh / Thành phố
+                    <option value="">Hà Nội</option>
+                  </select>
+                  <select name="" id="">
+                    <option value="">Quận Bắc Từ Liêm</option>
+                    <option value="">Quận Cầu Giấy</option>
+                    <option value="">Quận Đống Đa</option>
+                    <option value="">Quận Hà Đông</option>
+                    <option value="">Quận Hai Bà Trưng</option>
+                    <option value="">Quận Hoàn Kiếm</option>
+                    <option value="">Quận Hoàng Mai</option>
+                    <option value="">Quận Long Biên</option>
+                    <option value="">Quận Nam Từ Liêm</option>
+                    <option value="">Quận Tây Hồ</option>
+                    <option value="">Quận Thanh Xuân</option>
+                  </select>
+                </div>
+                <br />
+                <input type="text" name="address" id="address" />
+              </div>
+            </div>
+            <div class="confirm">
+              <button class="cart">Giỏ hàng</button>
+              <button class="payment">Phương thức thanh toán</button>
+            </div>
+          </form>
+        </div>
+        <!-- ==================Invoice===================== -->
+        <div class="cart-info">
+          <table>
+            <tr>
+              <td><img src="..//admin/asests/img/prd1.png" alt="" /></td>
+              <td class="product">
+                <div class="name">TIRAMISU CAKE MOUSSE</div>
+                <div class="size">21cm</div>
+              </td>
+              <td>1</td>
+              <td>330,000</td>
+            </tr>
+            <tr>
+              <td colspan="4"><hr /></td>
+            </tr>
+          </table>
+          <div class="discount">
+            <input
+              type="text"
+              name="voucher"
+              id="voucher"
+              placeholder="Mã giảm giá"
+            />
+            <button>Sử dụng</button>
+          </div>
+          <div class="saved">
+            <div>Giảm trừ</div>
+            <div>0</div>
+          </div>
+
+          <hr />
+          <hr />
+          <div class="total">
+            <div>Tổng tiền</div>
+            <div>330,000đ</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./check_out.js"></script>
+  </body>
+</html>

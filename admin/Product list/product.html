@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./product.css" />
+    <title>Admin Product</title>
+    <link rel="icon" type="image/x-icon" href="../asests/img/logo.png" />
+  </head>
+  <!-- =========================================== -->
+  <body>
+    <!--  -->
+    <div class="container">
+      <div class="wrap">
+        <!-- ===============Bar================== -->
+
+        <div class="bar">
+          <div class="logo">
+            <img src="..//asests/img/logo.png" alt="" />
+          </div>
+          <div class="nav-bar">
+            <ul>
+              <li class="line user">
+                <a href="../User/user.html"
+                  ><i class="fa-solid fa-user"></i> User
+                </a>
+              </li>
+              <li class="line categories">
+                <a href="../Categories/categories.html"
+                  ><i class="fa-solid fa-table-cells"></i> Categories
+                </a>
+              </li>
+              <li class="line product-list">
+                <a href="../Product list/product.html"
+                  ><i class="fa-solid fa-table-list"></i> Product List
+                </a>
+              </li>
+              <li class="line order">
+                <a href="../Order/order.html"
+                  ><i class="fa-solid fa-money-check-dollar"></i> Order
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- ===============Content================= -->
+        <div class="content">
+          <div class="top">
+            <h2>Products</h2>
+            <div class="search">
+              <input type="text" name="search" id="search-input" />
+              <!-- <input type="text" name="search" id="search-input" value="dark" /> -->
+              <button class="search-btn" onclick="search()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+          </div>
+          <!-- ===============Content================= -->
+          <div class="bottom">
+            <div class="products-control">
+              <h3 class="product-title">Products List</h3>
+              <div class="control-button">
+                <!-- <button class="btn filter">
+                  <i class="fa-regular fa-filter"></i> Filter
+                </button> -->
+                <!-- <select name="" id="select-cate" onchange="filter()"> -->
+                <select name="" id="select-cate" onchange="render()">
+                  <option value="">All</option>
+                  <option value="Gateaux Kem Tươi">Gateaux Kem Tươi</option>
+                  <option value="Gateaux Kem Bơ">Gateaux Kem Bơ</option>
+                  <option value="Bánh Sinh Nhật 2024">
+                    Bánh Sinh Nhật 2024
+                  </option>
+                  <option value="BÁNH SỐ">BÁNH SỐ</option>
+                  <option value="BÁNH MÌ">BÁNH MÌ</option>
+                  <option value="BÁNH MẶN">BÁNH MẶN</option>
+                  <option value="COOKIE">COOKIE</option>
+                  <option value="MINI">MINI</option>
+                  <option value="MINI">MINI</option>
+                </select>
+
+                <button class="btn add" onclick="addProduct()">
+                  <i class="fa-solid fa-plus"></i> Add
+                </button>
+                <!-- ====ADD BOX==================== -->
+                <div class="add-form" style="display: none">
+                  <form>
+                    <h2 class="form-title">CREATE NEW PRODUCT</h2>
+                    <table>
+                      <tr>
+                        <td class="col1">Product name</td>
+                        <td>
+                          <input
+                            type="text"
+                            name="name-product-add"
+                            id="name-product-add"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="col1" class="col1">Image</td>
+                        <td>
+                          <input
+                            type="file"
+                            name="img-product-add"
+                            id="img-product-add"
+                          />
+                          <img width="100px" id="image-product" src="" alt="" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="col1">Category</td>
+                        <td>
+                          <select
+                            name="select-categories"
+                            id="select-categories"
+                          >
+                            <option value=""></option>
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="col1">Price</td>
+                        <td>
+                          <input
+                            type="text"
+                            name="price-product-add"
+                            id="price-product-add"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="col1">Stock</td>
+                        <td>
+                          <input
+                            type="text"
+                            name="stock-product-add"
+                            id="stock-product-add"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="col1">Description</td>
+                        <td>
+                          <textarea
+                            name="description-product-add"
+                            id="description-product-add"
+                          ></textarea>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="col1"></td>
+                        <td>
+                          <div class="form-btn-action">
+                            <button id="addp-btn" onclick="addProductForm()">
+                              Add
+                            </button>
+                            <button
+                              id="update-product-btn"
+                              style="display: none"
+                              onclick="updateProductForm()"
+                            >
+                              Update
+                            </button>
+                            <button id="cancel-btn">Cancel</button>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </form>
+                </div>
+                <!-- ============== -->
+              </div>
+            </div>
+            <hr />
+            <!-- ===============Content================= -->
+            <div class="product-table">
+              <table>
+                <thead>
+                  <th>ID</th>
+                  <th class="td-product-name">Product Name</th>
+                  <th>Image</th>
+                  <th>Categories</th>
+                  <th>Price</th>
+                  <th>Stock</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </thead>
+                <tr>
+                  <td colspan="8"><hr /></td>
+                </tr>
+                <tbody id="product-list-tbody"></tbody>
+              </table>
+              <!-- ===============Content================= -->
+              <!-- PAGINATION -->
+              <!-- <ul class="pagination">
+                <li class="pagination-item">
+                  <a href="" class="pagination-item__link">
+                    <i class="pagination-item__icon fas fa-angle-left"></i>
+                  </a>
+                </li> -->
+              <!--  -->
+              <!-- <li class="pagination-item pagination-item--active">
+                  <a href="" class="pagination-item__link">1</a>
+                </li>
+                <li class="pagination-item">
+                  <a href="" class="pagination-item__link">2</a>
+                </li>
+                <li class="pagination-item">
+                  <a href="" class="pagination-item__link">3</a>
+                </li>
+                <li class="pagination-item">
+                  <a href="" class="pagination-item__link">4</a>
+                </li>
+                <li class="pagination-item">
+                  <a href="" class="pagination-item__link">...</a>
+                </li>
+                <li class="pagination-item">
+                  <a href="" class="pagination-item__link">10</a>
+                </li> -->
+              <!--  -->
+              <!-- <li class="pagination-item">
+                  <a href="" class="pagination-item__link">
+                    <i class="pagination-item__icon fas fa-angle-right"></i>
+                  </a>
+                </li>
+              </ul> -->
+              <!-- =============== -->
+              <div class="pagination">
+                <button><i class="fas fa-angle-left"></i></button>
+                <div class="page">
+                  <!-- <button class="pagination" id="${i}" onclick="selectPage()">
+                    1
+                  </button> -->
+                </div>
+                <button><i class="fas fa-angle-right"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./product.js"></script>
+  </body>
+</html>

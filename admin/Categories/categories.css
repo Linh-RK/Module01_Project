@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  background-color: rgb(237, 237, 237);
+  height: 100vh;
+}
+.container .wrap {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 20px;
+}
+.bar {
+  background-color: white;
+  border-radius: 10px;
+  background-image: url(http://127.0.0.1:5500/admin/asests/img/bg-bar-side.png);
+  /* background-image: url(http://127.0.0.1:5500/admin/asests/img/bg-side-bar.png); */
+  object-fit: cover;
+  object-position: center;
+  background-size: cover;
+  padding: 0 50px;
+  height: 100vh;
+}
+.bar .logo {
+  /* background-color: white; */
+  text-align: center;
+  border-radius: 10px;
+}
+.bar .logo img {
+  border: 2px solid white;
+}
+.bar ul {
+  list-style: none;
+  padding: 20px;
+}
+.bar ul a {
+  text-decoration: none;
+  color: rgb(52, 52, 52);
+  font-size: 20px;
+}
+.bar ul li {
+  margin: 20px 0;
+}
+/* =================Content==================- */
+.confirm {
+  padding: 10px 20px;
+  width: 100px;
+}
+.control-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.content .bottom input,
+select,
+option {
+  padding: 10px 20px;
+}
+
+/* ====================Top===============- */
+.content .top {
+  display: flex;
+  flex-direction: column;
+  /* background-image: url(http://127.0.0.1:5500/admin/asests/img/bg-admin-top.jpg); */
+  object-fit: cover;
+  padding: 20px;
+  border: 1px solid gray;
+  background-color: #fffff4;
+  border-radius: 10px;
+}
+.content .top h2 {
+  color: black;
+  max-width: fit-content;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.content .top .add-cate input {
+  width: 60%;
+  line-height: 2rem;
+  border-radius: 5px;
+  line-height: 2rem;
+  border: 1px solid gray;
+  width: 80%;
+  padding: 0 10px;
+}
+
+.content .top .add-cate .input {
+  text-align: center;
+}
+.content .top .add-cate .btn {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px 0 0 0;
+}
+.content .top .add-cate button {
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  padding: 0 5px;
+  line-height: 2rem;
+  min-width: 130px;
+  padding: 3px;
+  color: white;
+}
+.content .top .add-cate #add {
+  background-color: rgb(116, 166, 41);
+}
+.content .top .add-cate #cancel {
+  background-color: rgb(231, 125, 125);
+}
+.content .top .add-cate #updateTop {
+  background-color: rgb(70, 181, 228);
+}
+/* ==================Bottom==============- */
+.content .bottom {
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 0 20px;
+}
+.content .bottom .products-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.content .bottom .products-control .control-button button {
+  font-size: 16px;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+.content .bottom .products-control .control-button .filter {
+  background-color: white;
+}
+.content .bottom .products-control .control-button .see-all {
+  background-color: lightslategray;
+}
+.content .bottom .products-control .control-button .add {
+  background-color: rgb(77, 38, 124);
+  color: white;
+}
+
+/* ===================================- */
+.content .bottom .product-table table {
+  width: 100%;
+  text-align: center;
+}
+.content .bottom .product-table th,
+td {
+  padding: 5px;
+  border-collapse: collapse;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+.content .bottom .product-table table thead,
+tr {
+  border: 1px solid gray;
+}
+.content .bottom .product-table i {
+  padding: 5px;
+}
+/* .content .bottom .product-table .pic {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  } */
+.content .bottom .product-table img {
+  width: 50px;
+}
+/* ===================================- */
+.content .bottom .product-info .table-head,
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+.content .bottom .product-table button {
+  font-size: 16px;
+  padding: 5px;
+}
+/* ===================Page control================- */
+.content .page-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.content .page-control .page > button {
+  width: 30px;
+}
+/* ===================================- */
+/* ===================================- */

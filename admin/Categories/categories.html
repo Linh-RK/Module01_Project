@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./categories.css">
+    <title> Admin Categories</title>
+    <link rel="icon" type="image/x-icon" href="../asests/img/logo.png">
+  </head>
+  <body>
+    <div class="container">
+        <div class="wrap">
+          <!-- ===============Bar================== -->
+          
+          <div class="bar">
+            <div class="logo">
+              <img src="..//asests/img/logo.png" alt="" />
+            </div>
+            <div class="nav-bar">
+              <ul>
+                <li class="line user">
+                  <a href="../User/user.html"><i class="fa-solid fa-user"></i> User </a>
+                </li>
+                <li class="line categories">
+                  <a href="../Categories/categories.html"
+                    ><i class="fa-solid fa-table-cells"></i> Categories
+                  </a>
+                </li>
+                <li class="line product-list">
+                  <a href="../Product list/product.html"
+                    ><i class="fa-solid fa-table-list"></i> Product List
+                  </a>
+                </li>
+                <li class="line order">
+                  <a href="../Order/order.html"
+                    ><i class="fa-solid fa-money-check-dollar"></i> Order
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- ===============Content================= -->
+          <div class="content">
+            <div class="top">
+              <h2 class="title">ADD NEW CATEGORY</h2>
+              <div class="add-cate">
+                <div class="input">
+                  <input id="inputNew" type="text" />
+                </div>
+                <div class="btn">
+                  <button id="cancel" onclick="cancel()">CANCEL</button>
+                  <button id="add" onclick="add()">ADD</button>
+                  <button id="updateTop" style="display: none" onclick="update()" >UPDATE</button>
+                </div>
+                </div>
+            </div>
+            <!-- ====== class="confirm"=========Content================= -->
+            <div class="bottom">
+              <div class="products-control">
+                <h3 class="product-title">DANH MỤC</h3>
+                <div class="control-button">
+                  <div>Sort</div>
+                  <div>
+                    <select name="sort" id="sort" onchange="render()">
+                      <option value="az">A => Z</option>
+                      <option value="za">Z => A</option>
+                    </select>
+                    <input type="text" id="input-search">
+                  </div>
+                  <div>
+                    <button class="search-btn" onclick="render()">SEARCH</button>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <!-- ===============Content================= -->
+              <div class="product-table">
+                <table>
+                  <thead>
+                    <th>ID</th>
+                    <th>Tên</th>
+                    <th>Hành động</th>
+                  </thead>
+                  <!-- ========== -->
+                  <tbody id = "lineCate">
+                    <tr class="add-area">
+                      <td>1</td>
+                      <td id="nameCate">Cart</td>
+                      <td>
+                        <button class="update-cate" onclick="updateCate()">Update</button>
+                        <button class="delete-cate" onclick="deleteCate()">Delete</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- ===============Content================= -->
+
+                </section>
+                <section class="page-control">
+                  <button class="pre">Previous</button>
+                  <div class="page">
+                    <button>1</button>
+                  </div>
+                  <button class="next">Next</button>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="./categories.js"></script>
+  </body>
+</html>

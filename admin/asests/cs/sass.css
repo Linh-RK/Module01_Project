@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+} 
+/* =========================================Variables CSS====================================== */
+:root {
+--header-height: 3rem;
+  /* ================Color=============== */
+  --main-color: #c20d5a;
+  --second-color: rgb(7, 3, 45);
+  --main-gradient: linear-gradient(
+    121deg,
+    rgba(192, 13, 90, 1) 25%,
+    rgb(255 0 194/42%) 100%
+  );
+  --dark-bg: #383848;
+  --main-color-alt: #af547d;  
+  --text-color: #707070
+  --white-color:#ffff
+  --white-alt:#e6e6e6
+
+  /* ================Font & typography=============== */
+--body-font: "Poppins", sans-serif;
+--biggest-font-size: 2.25rem;
+--h1-font-size: 1.5rem;
+--h2-font-size: 1.25rem;
+--h3-font-size: 1rem;
+--normal-font-size: 0.938rem;
+--small-font-size: 0.813rem;
+--smaller-font-size: 0.75rem;
+
+  /* ================Font width=============== */
+--font-medium: 500;
+--font-semi-bold: 600;
+
+  /* ================MArgin Padding=============== */
+--md-1:5rem;
+--mb-2: 1rem;
+--mb-3: 1.5rem;
+--mb-4: 2rem;
+--mb-5: 2.5rem;
+--mb-6: 3rem;
+
+  /* ================Z Index=============== */
+--z-tooltip:10;
+--z-fixed:100;
+}
+/* =========================================CSS Variables END====================================== */
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    color: var(--second-color);
+    font-size: 13px;
+    font-weight: 400;
+    font-family: var(--body-font);
+}
+/* ================================================================================ */
+
+/* ================================================================================ */
+
+/* ================================================================================ */
+
+/* ================================================================================ */
+
+/* ================================================================================ */
